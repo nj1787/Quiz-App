@@ -9,13 +9,50 @@ body {
 #app-header {
   margin-left: 0%;
   max-width: 100%;
-  height: 12%;
-  padding: 2% 10%;
+  height: 40px;
+  padding: 1% 10%;
   border: 2px solid rgb(244, 121, 182);
   background-color: rgb(140, 250, 200);
 }
 
 #app-header > h1 {
   margin-left: 35%;
-  font-size: 2.8rem;
+  font-size: 1.9rem;
+}
+
+#question-display {
+  width: 65%;
+  margin: 1% 13%;
+  height: 40px;
+  padding: 35px;
+  border: 2px solid rgb(233, 191, 254);
+  font-size: 1.5rem;
+}
+
+#question-display > h3 {
+  margin-left: 20%;
+}
+
+.option {
+  list-style: none;
+  margin: 1% 35%;
+  border: 2px solid rgb(11, 102, 183);
+  width: 25%;
+  height: 15%;
+  font-size: 1.2rem;
+  padding: 14px;
+}
+
+#score-heading {
+  margin: 0% 44%;
+}
+
+#current-score {
+  margin: 1% 45%;
+}
+
+#next {
+  margin-left: 39%;
+  width: 20%;
+  height: 45px;
 }
