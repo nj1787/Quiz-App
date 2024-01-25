@@ -1,31 +1,17 @@
-let currentQuestionIndex = 1;
+export let currentQuestionIndex = 1;
 
-let currentScore = 0;
+export let currentScore = 0;
 
-const totalScore = 5;
+export const totalScore = 5;
 
-const questionObjects = [
-  {
-    questionId: 1,
-    question: "Which of the following is capital of India ?",
-    options: ["New Delhi", "Mumbai", "Chennai", "Kolkata"],
-    answer: "New Delhi",
-  },
-  {
-    questionId: 2,
-    question: "Who is the Prime Minister Of India ?",
-    options: ["Rajnath Singh", "Amit Shah", "S. Jaishankar", "Narendra Modi"],
-    answer: "Narendra Modi",
-  },
-];
+import { questionObjects } from "./modules/data.js";
 
-const questionDisplay = document.getElementById("question-display");
-
-const optionsDisplay = document.getElementById("options-display");
-
-const displayNextBtn = document.getElementById("next");
-
-const scoreDisplay = document.getElementById("score-display");
+import {
+  questionDisplay,
+  optionsDisplay,
+  scoreDisplay,
+  displayNextBtn,
+} from "./modules/elements.js";
 
 const currentQuestion = questionObjects.filter(
   (q) => q.questionId === currentQuestionIndex
@@ -53,8 +39,6 @@ scoreDisplay.append(score);
 
 displayNextBtn.addEventListener("click", nextQuestion);
 
-// Functionalities
-
 function nextQuestion() {
   currentQuestionIndex += 1;
   questionDisplay.innerHTML = "";
@@ -79,7 +63,7 @@ function nextQuestion() {
   optionsDisplay.append(ul);
 }
 
-function checkAnswer(obj) {
+export function checkAnswer(obj) {
   const selectedAnswer = obj.target.innerHTML;
   const currentQuestion = questionObjects.filter(
     (q) => q.questionId === currentQuestionIndex
